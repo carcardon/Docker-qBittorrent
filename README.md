@@ -1,4 +1,4 @@
-## **Verison：**
+## **Verison**
 # latest：
 qBittorrent-4.0.4 (libtorrent-1.1.17)
 
