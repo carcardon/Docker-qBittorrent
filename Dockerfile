@@ -10,13 +10,13 @@ RUN apt-get update && \
     cd libtorrent/ && \
     git checkout RC_1_1 && \
     ./autotool.sh && \
-	./configure --prefix=/usr --disable-debug --enable-encryption --with-libgeoip=system CXXFLAGS=-std=c++11 && \
+    ./configure --prefix=/usr --disable-debug --enable-encryption --with-libgeoip=system CXXFLAGS=-std=c++11 && \
     make clean && \
     make -j$(nproc) && \
     make install && \
     cd .. && \
 
-	# Download qBittorrent 4.0.4
+    # Download qBittorrent 4.0.4
     ldconfig && \
     wget https://github.com/qbittorrent/qBittorrent/archive/release-4.0.4.tar.gz && \
     tar -xzvf release-4.0.4.tar.gz && \
@@ -26,9 +26,9 @@ RUN apt-get update && \
     make install && \
     cd .. && \
 
-	# Clean up
+    # Clean up
     apt-get purge -y $BUILD_PACKAGES && \
-	rm -rf /var/lib/apt/lists/* && \
+    rm -rf /var/lib/apt/lists/* && \
     rm -rf *.gz && \
     rm -rf /libtorrent && \
     rm -rf /qBittorrent-release-4.0.4
