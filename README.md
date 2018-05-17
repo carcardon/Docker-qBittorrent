@@ -11,7 +11,7 @@ docker run -itd \
 -p 54321:54321/tcp \
 -p 54321:54321/udp \
 -p 56789:56789/tcp \
--v <path to config>:/downloads \
+-v <path to downloads>:/downloads \
 madjack/qbittorrent:<verison>
 
 ## **for Synology DSM：**
