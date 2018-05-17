@@ -34,8 +34,8 @@ RUN apt-get update && \
     rm -rf /qBittorrent-release-4.0.4
 
     # Add Config File
-COPY qbittorrent /etc/init.d/ && \
-     qBittorrent.conf /root/.config/qBittorrent/
+COPY qbittorrent /etc/init.d/
+COPY qBittorrent.conf /root/.config/qBittorrent/
 
     # Chmod qBittorrent service
 RUN chmod +x /etc/init.d/qbittorrent && \
