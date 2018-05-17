@@ -6,7 +6,7 @@ qBittorrent-4.0.4 (libtorrent-1.1.17)
 qBittorrent-3.3.11 (libtorrent-1.0.11)
 
 ## **for Linux：**
-''docker run -itd \
+'docker run -itd \'
 --name=<container name> \
 -p 54321:54321/tcp \
 -p 54321:54321/udp \
