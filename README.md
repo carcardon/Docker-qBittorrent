@@ -9,7 +9,7 @@ qBittorrent-3.3.11 (libtorrent-1.0.11)
 `-p 54321:54321/udp \`
 `-p 56789:56789/tcp \`
 `-v <path to downloads>:/downloads \`
-`madjack/qbittorrent`
+`madjack/qbittorrent:3.3.11`
 
 ## **for Synology DSM：**
 設定Synoogy Nas本機資料夾對應到容器的資料夾 /downloads
