@@ -5,10 +5,10 @@ ENV BUILD_PACKAGES build-essential pkg-config automake libtool git wget libboost
 RUN apt-get update && \
     apt-get install geoip-database $BUILD_PACKAGES -y && \
 
-    # Build libtorrent 1.0.11
+    # Build libtorrent 1.1.17
     git clone https://github.com/arvidn/libtorrent.git && \
     cd libtorrent/ && \
-    git checkout RC_1_0 && \
+    git checkout RC_1_1 && \
     ./autotool.sh && \
     .configure --prefix=/usr --disable-debug --enable-encryption --with-libgeoip=system CXXFLAGS=-std=c++11 && \
     make clean && \
@@ -16,11 +16,11 @@ RUN apt-get update && \
     make install && \
     cd .. && \
 
-    # Download qBittorrent 3.3.11
+    # Download qBittorrent 4.1.0
     ldconfig && \
-    wget https://github.com/qbittorrent/qBittorrent/archive/release-3.3.11.tar.gz && \
-    tar -xzvf release-3.3.11.tar.gz && \
-    cd qBittorrent-release-3.3.11/ && \
+    wget https://jaist.dl.sourceforge.net/project/qbittorrent/qbittorrent/qbittorrent-4.1.0/qbittorrent-4.1.0.tar.gz && \   
+    tar -xzvf qbittorrent-4.1.0.tar.gz  && \
+    cd qbittorrent-4.1.0/ && \
     ./configure --prefix=/usr --disable-gui && \
     make && \
     make install && \
@@ -31,7 +31,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf *.gz && \
     rm -rf /libtorrent && \
-    rm -rf /qBittorrent-release-3.3.11
+    rm -rf /qbittorrent-4.1.0
 
     # Add Config File
 COPY qbittorrent /etc/init.d/
