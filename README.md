@@ -1,7 +1,4 @@
 ## **Verison**
-# latest：
-qBittorrent-4.0.4 (libtorrent-1.1.17)
-
 # 3.3.11：
 qBittorrent-3.3.11 (libtorrent-1.0.11)
 
@@ -25,3 +22,4 @@ The WebUI running on **<http://localhost:56789/>**
 default user:**admin** 
 
 default password:**adminadmin**
+
