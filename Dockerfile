@@ -18,9 +18,9 @@ RUN apt-get update && \
 
     # Download qBittorrent 4.0.4
     ldconfig && \
-    wget https://github.com/qbittorrent/qBittorrent/archive/release-4.0.4.tar.gz && \
-    tar -xzvf release-4.0.4.tar.gz && \
-    cd qBittorrent-release-4.0.4/ && \
+    wget https://jaist.dl.sourceforge.net/project/qbittorrent/qbittorrent/qbittorrent-4.1.0/qbittorrent-4.1.0.tar.gz && \
+    tar -xzvf qbittorrent-4.1.0.tar.gz && \
+    cd qbittorrent-4.1.0/ && \
     ./configure --prefix=/usr --disable-gui && \
     make -j$(nproc) && \
     make install && \
@@ -31,7 +31,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf *.gz && \
     rm -rf /libtorrent && \
-    rm -rf /qBittorrent-release-4.0.4
+    rm -rf /qbittorrent-4.1.0
 
     # Add Config File
 COPY qbittorrent /etc/init.d/
