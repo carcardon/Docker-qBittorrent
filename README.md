@@ -1,6 +1,6 @@
 ## **Verison**
 # latest：
-qBittorrent-4.0.4 (libtorrent-1.1.17)
+qBittorrent-4.1.0 (libtorrent-1.1.17)
 
 ## **for Linux：**
 `docker run -itd \`
