@@ -12,7 +12,7 @@ RUN apt-get update && \
     ./autotool.sh && \
     .configure --prefix=/usr --disable-debug --enable-encryption --with-libgeoip=system CXXFLAGS=-std=c++11 && \
     make clean && \
-    make -j$(nproc) && \
+    make && \
     make install && \
     cd .. && \
 
@@ -22,7 +22,7 @@ RUN apt-get update && \
     tar -xzvf release-3.3.11.tar.gz && \
     cd qBittorrent-release-3.3.11/ && \
     ./configure --prefix=/usr --disable-gui && \
-    make -j$(nproc) && \
+    make && \
     make install && \
     cd .. && \
 
